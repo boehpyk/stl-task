@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Load and view STL</title>
+	<link rel="stylesheet" href="style.css" />
+
+
+
+</head>
+<body>
+
+	<h1>STL view</h1>
+
+	<div id="drop-area">
+		<form class="my-form">
+			<p>Load files using dialog or drag and drop them into selected area</p>
+			<input type="file" id="fileElem" multiple accept="*" onchange="handleFiles(this.files)">
+			<label class="button" for="fileElem">Select files</label><br />
+			<progress id="progress-bar" max=100 value=0></progress>
+		</form>
+	</div>
+
+	<div id="gallery"></div>
+	<div class="reload hidden" id="reload">
+		<button onclick="javascript:window.location.reload(false);">Load another models</button>
+	</div>
+
+
+	<script type="application/javascript" src="stl_viewer.min.js"></script>
+	<script type="application/javascript" src="js/main.js"></script>
+
+</body>
+</html>
